@@ -1,0 +1,59 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+.main {
+  height: 100vh;
+}
+.box {
+  width: 50%;
+  border-radius: 4px;
+}
+#standard,
+#metric {
+  color: #fff;
+  transition: 0.5s;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.small {
+  background-color: transparent;
+  border: 2px solid #2377ff;
+  width: 25%;
+  transition: 0.5s;
+}
+.large {
+  background-color: #2377ff;
+  border: 2px solid #2377ff;
+  color: #fff;
+  width: 50%;
+}
+
+@media only screen and (max-width: 1075px) {
+  .box {
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 730px) {
+  #standard,
+  #metric {
+    padding: 4px 12px;
+    font-size: 0.8rem;
+  }
+}
+
+@media only screen and (max-width: 524px) {
+  #standard,
+  #metric {
+    padding: 4px 8px;
+    font-size: 0.6rem;
+  }
+  .box {
+    width: 85%;
+  }
+}
