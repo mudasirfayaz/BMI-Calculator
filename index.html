@@ -32,12 +32,114 @@
     <title>BMI Calculator</title>
   </head>
   <body>
-    <div class="main d-flex justify-content-center align-items-center">
-      <div class="box bg-dark p-3">
-        <div class="d-flex justify-content-evenly align-items-center">
-          <div id="standard" class="large">Standard</div>
-          <div id="metric" class="small">Metric</div>
+    <div class="main d-flex justify-content-center align-items-end">
+      <div class="box bg-dark">
+        <div class="d-flex justify-content-start align-items-center">
+          <div id="standardUnit" class="large">Standard</div>
+          <div id="metricUnit" class="small">Metric</div>
         </div>
+        <hr />
+        <div id="standard">
+          <div class="input-group mb-3">
+            <input
+              id="pds"
+              type="text"
+              class="form-control bg-dark"
+              aria-label="Weight"
+              placeholder="Enter your weight"
+            />
+            <span class="input-group-text bg-secondary text-light">Pounds</span>
+          </div>
+
+          <div class="d-flex align-items-center mt-4">
+            <div class="input-group me-3">
+              <input
+                id="ft"
+                type="text"
+                class="form-control bg-dark"
+                aria-label="pounds"
+                placeholder="Height"
+              />
+              <span class="input-group-text bg-secondary text-light">Feet</span>
+            </div>
+            <div class="input-group">
+              <input
+                id="in"
+                type="text"
+                class="form-control bg-dark"
+                aria-label="pounds"
+                placeholder="Height"
+              />
+              <span class="input-group-text bg-secondary text-light"
+                >Inches</span
+              >
+            </div>
+          </div>
+        </div>
+        <div id="metric" class="none">
+          <div class="input-group mb-3">
+            <input
+              id="kg"
+              type="text"
+              class="form-control bg-dark"
+              aria-label="Weight"
+              placeholder="Enter your weight"
+            />
+            <span class="input-group-text bg-secondary text-light">Kg</span>
+          </div>
+          <div class="input-group mb-3 mt-4">
+            <input
+              id="cm"
+              type="text"
+              class="form-control bg-dark"
+              aria-label="Weight"
+              placeholder="Enter your Height"
+            />
+            <span class="input-group-text bg-secondary text-light">cm</span>
+          </div>
+        </div>
+        <div class="d-grid mt-4">
+          <button onclick="bmiCalc()" class="btn btn-light fw-bold">
+            Check Your BMI
+          </button>
+        </div>
+        <div class="input-group input-group-lg mt-4">
+          <span class="input-group-text bg-secondary text-light" id="bmi"
+            >Your BMI</span
+          >
+          <input
+            id="output"
+            type="text"
+            class="form-control bg-dark text-center fw-bold"
+            aria-label="Sizing example input"
+            aria-describedby="bmi"
+            readonly
+          />
+        </div>
+        <hr />
+        <div class="table-set container text-center mt-sm-5 mt-2 px-sm-0">
+          <div class="row">
+            <div class="col-6 col-sm-3 border text-light">
+              <span>Underweight</span><br /><span>Below 18.5</span>
+            </div>
+            <div class="col-6 col-sm-3 border text-light">
+              <span>Normal Weight</span><br /><span>18.5 - 25.0</span>
+            </div>
+            <div class="col-6 col-sm-3 border text-light">
+              <span>Overweight</span><br /><span>25.0 - 30.0</span>
+            </div>
+            <div class="col-6 col-sm-3 border text-light">
+              <span>Obesity</span><br /><span>30.0 or over</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center align-items-center py-2">
+        <a
+          href="https://github.com/mudasirfayaz"
+          class="copyright text-body-secondary font-monospace text-decoration-none"
+          >©️ Mudasir Fayaz</a
+        >
       </div>
     </div>
     <script src="script.js"></script>

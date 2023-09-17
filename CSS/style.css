@@ -8,52 +8,106 @@ body {
   height: 100vh;
 }
 .box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 50%;
+  padding: 54px;
   border-radius: 4px;
 }
-#standard,
-#metric {
+#standard #metric {
+  margin-top: 48px;
+  transition: 0.5s;
+}
+
+#standardUnit,
+#metricUnit {
   color: #fff;
   transition: 0.5s;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 1.2rem;
-  padding: 8px 16px;
+  padding: 6px 12px;
   border-radius: 4px;
   cursor: pointer;
+  overflow-x: hidden;
+}
+#standardUnit {
+  margin-right: 18px;
 }
 .small {
   background-color: transparent;
-  border: 2px solid #2377ff;
-  width: 25%;
+  border: 2px solid #7096d2;
+  width: 35%;
   transition: 0.5s;
 }
 .large {
-  background-color: #2377ff;
-  border: 2px solid #2377ff;
+  background-color: #7096d2;
+  border: 2px solid #7096d2;
   color: #fff;
-  width: 50%;
+  width: 65%;
+}
+hr {
+  color: #fff;
+}
+.form-control,
+.form-control::placeholder,
+.form-control:focus {
+  color: #fff;
+}
+.table-set div {
+  padding: 12px;
+}
+.none {
+  display: none;
 }
 
-@media only screen and (max-width: 1075px) {
+@media only screen and (max-width: 992px) {
   .box {
     width: 75%;
+    padding: 34px;
   }
 }
-@media only screen and (max-width: 730px) {
-  #standard,
-  #metric {
+@media only screen and (max-width: 768px) {
+  #standard {
+    margin-top: 28px;
+  }
+  #standardUnit,
+  #metricUnit {
     padding: 4px 12px;
     font-size: 0.8rem;
   }
+  .form-control::placeholder,
+  .input-group-text {
+    font-size: 0.8rem;
+  }
+  .table-set div {
+    padding: 6px;
+    font-size: 0.8rem;
+  }
+  .copyright {
+    font-size: 0.6rem;
+  }
 }
 
-@media only screen and (max-width: 524px) {
-  #standard,
-  #metric {
+@media only screen and (max-width: 590px) {
+  #standard {
+    margin-top: 16px;
+  }
+  #standardUnit,
+  #metricUnit {
     padding: 4px 8px;
     font-size: 0.6rem;
   }
+  #standardUnit {
+    margin-right: 8px;
+  }
   .box {
+    padding: 22px;
     width: 86%;
+  }
+  .form-control::placeholder,
+  .input-group-text {
+    font-size: 0.6rem;
   }
 }
